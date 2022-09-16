@@ -279,6 +279,57 @@ footer .container{
 	top: 1rem;
 }
 
+/*=============================== about style ===============================*/
+.article-links{
+	margin: 0 0 2rem 0;
+	overflow: hidden;
+}
+.article-links li{
+	float: left;
+	width: calc(100% / 3 - 10px);
+	border: 1px solid var(--primary-color);
+	text-align: center;
+	padding: .5rem 0;
+	box-sizing: border-box;
+}
+.article-links li.selected{
+	background-color: var(--primary-color);	
+	color: var(--text-color);
+}
+article-links a{
+	color: inherit;
+}
+ /*		시놉시스 */
+ #synopsis{
+ 	overflow: hidden;
+ }
+ #synopsis .poster{
+ 	float: left;
+ 	width: 50%;
+ }
+ #synopsis .intro{
+ 	float: right;
+ 	width: 50%;
+ }
 
-
-
+.intro-header{
+	margin: 2rem 0 0 0 ;
+}
+.intro-body{
+	margin: 1rem 0;
+}
+.castings td, .trailers td{
+	padding: .5rem;
+	text-align: center;
+	font-size: .875rem;
+	overflow: hidden;
+}
+.castings td:hover img, .trailers td:hover img{
+	transform: scale(1.2);
+}
+.castings td img, .trailers td img{
+	/* max-width: 100%;		old */
+	object-fit: cover;		/* new */
+	width: 100%;
+	transition: all .3s;
+}
