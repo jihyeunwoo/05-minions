@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>CSS 레이아웃 기법</title>
+		<link href="favicon.png" rel="shortcut icon">
+		<style>
+			.container{
+				max-width: 1000px;
+				min-height: 500px;
+				margin: 0 auto;
+			}
+			.position{
+				background-color: lightYellow;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+				box-sizing: border-box;	/* 상자-크기 : 테두리 포함 */
+			}
+			.static{
+				position: static;
+				top: 100px;
+				left: 100px;
+			}
+			.absolute{
+				position: absolute;
+				top: 100px;
+				left: 100px;
+			}
+			.relative{
+				position: relative;
+				top: 100px;
+				left: 100px;
+			}
+			.fixed{
+				position: fixed;
+				bottom: 100px;
+				right: 100px;
+			}
+			.sticky{
+				position: sticky;
+				top : 0px;
+				background-color: lightYellow;
+			}
+			.float img{
+				float: right;
+				
+			}
+		</style>
+	</head>
+	<body id="top">
+		<h1>레이아웃</h1>
+		<p>배치의 다른 말, 각종 UI 요소들을 원하는 곳에 두는 방법</p>
+		<header class="sticky">
+		<h2>레이아웃 기법의 종류</h2>
+			<ol>
+				<li>블럭 vs 인라인</li>
+				<li>포지셔닝(position)</li>
+				<li>플로팅(float)</li>
+				<li>플렉스(flex)</li>
+				<li>그리드(grid)</li>
+				<li>다중컬럼(column-cout, column-width)</li>
+			</ol>
+		</header>
+		<h3>레이아웃 실습I</h3>
+		<h4>블럭 vs 인라인</h4>
+		<p>가로에 하나의 컨텐츠를 배치하는 HTML 요소의 스타일 기본 속성을 블럭(block level element)이라고 함 </p>
+		<p>인라인 요소(Inline Level Element)는 가로에 여러개의 컨텐츠 요소를 배치하고 컨텐츠가 넘치면 자동으로 줄바꿈 합니다.</p>
+		
+		
+		
+		<div class="container">
+			<p>짧은 달락1</p>
+			<p>짧은 달락2</p>
+			<p>짧은 달락3</p>
+			<a href="#">링크1</a>
+			<a href="#">링크2</a>
+			<a href="#">링크3</a>
+		</div>
+		
+		<h3>레이아웃 실습 II</h3>
+		<h4>포지셔닝</h4>
+		<p>컨텐츠의 위치를 지정하는 방법으로 크게 5가지의 속성을 가질 수 있다.</p>
+		
+		
+		<ul>
+			<li>position: static [일반적인 흐름에 따라 요소를 배치]</li>
+			<li>position: absolute [절대적인 위치에 배치]</li>
+			<li>position: relative [상대적인 위치에 배치]</li>
+			<li>position: fixed [고정적인 위치에 배치]</li>
+			<li>position: sticky(아직 표준 X [static + absolute])</li>
+		</ul>
+		
+		<div class="container position">
+			<p>조금 긴 단락 Lorem ipsum dolor sit beatae voluptates blanditiis ducimus illum sed at velit necessitatibus!</p>
+			<div class= "box static">static 상자</div> 
+			<div class= "box absolute">absolute 상자</div> 
+			<div class= "box relative">relative 상자</div> 
+			<div class= "box fixed"><a href="#top">▲TOP</a></div> 
+		</div>
+		
+		<h3>레이아웃 실습 III</h3>
+		<h4>플로팅(float)</h4>
+		
+		<div class="container float">
+			<img src="https://picsum.photos/id/100/200/200" alt="dummy image" />
+			<p>그냥 텍스트를 적습니다. float은 이미지와 텍스트를 나란히 배치하는 목적으로
+			만들어진 속성으로 알려져있습니다.</p>
+		</div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur maxime.</p>
+		
+		
+	</body>
+</html>

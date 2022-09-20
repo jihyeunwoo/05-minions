@@ -10,10 +10,31 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<link rel="stylesheet" href="css/style.css" />
+		<script src="//code.jquery.com/jquery-latest.min.js"></script>
 		<!-- 깃으로 관리되는 index.html -->
+		<script>
+			$(function(){
+				$("#close").click(function(){
+					setTimeout(showAfterLoad, 3000);
+					function showAfterLoad(){
+						$("#popup").css("display","block");
+						$("body").css("overflow", "hidden");
+					}
+					//#popup을 감춰/사라지게해줘/보이지 않게 해줘
+					$("#popup").css("display","none");
+					$("body").css("overflow", "auto");
+				})
+			})
+		</script>
 	</head>
 	<body>
 		<h1 class="d-none">Minions: The Rise of Gru</h1>
+		<div id="popup" class="bg">
+			<div class="content">
+				<img src="imgs/big-event-cut.jpg" alt="미니언즈2 이벤트" />
+			</div>
+			<button type="button" id="close">&times;</button>
+		</div>
 		<header>
 			<div class="header-top">
 				<ul class="links">

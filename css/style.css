@@ -17,6 +17,38 @@ body{
 	line-height: 1.5;
 	letter-spacing : -1px;
 }
+/*================= style ======================*/
+#popup{
+	position : fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;		/* viewport width : vw*/
+	height: 100vh;		/* viewport height : vh*/
+	z-index: 9999;		/* 포지셔닝 요소의 깊이값 : 1~9999 */
+}
+#popup.bg{
+	background-color: rgba(0,0,0,.3);	/* 검정색, 30% 투명도*/
+}
+.content{
+	position: absolute;
+	width: 225px;
+	height: 225px;
+	left: 50%;
+	top: 50%;
+	margin-left: calc(-225px / 2);
+	margin-top: calc(-225px / 2);
+}
+#close{
+	position: absolute;
+	width: 30px;
+	height:30px;
+	background: balck;
+	color: white;
+	border-radius: 50%;
+	right: 43%;
+	top: 35%;
+}
+
 /*================== google font icon style ======================*/
 .material-symbols-outlined {
   font-variation-settings:
