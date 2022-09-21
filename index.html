@@ -10,22 +10,8 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<link rel="stylesheet" href="css/style.css" />
-		<script src="//code.jquery.com/jquery-latest.min.js"></script>
-		<!-- 깃으로 관리되는 index.html -->
-		<script>
-			$(function(){
-				$("#close").click(function(){
-					setTimeout(showAfterLoad, 3000);
-					function showAfterLoad(){
-						$("#popup").css("display","block");
-						$("body").css("overflow", "hidden");
-					}
-					//#popup을 감춰/사라지게해줘/보이지 않게 해줘
-					$("#popup").css("display","none");
-					$("body").css("overflow", "auto");
-				})
-			})
-		</script>
+					<!-- jquery 쓸때 필요 -->
+<!-- 	<script src="//code.jquery.com/jquery-latest.min.js"></script> -->
 	</head>
 	<body>
 		<h1 class="d-none">Minions: The Rise of Gru</h1>
@@ -216,5 +202,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="script/main.js"></script>
 	</body>
 </html>
